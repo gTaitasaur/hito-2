@@ -6,7 +6,7 @@ const RegisterPage = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const registerSubmit = (e) => {
     e.preventDefault();
     if (!email || !password || !confirmPassword) {
       setMessage('Todos los campos son obligatorios.');
@@ -22,7 +22,7 @@ const RegisterPage = () => {
   return (
     <div>
       <h2>Registro</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={registerSubmit}>
         <input
           type="email"
           placeholder="Email"
